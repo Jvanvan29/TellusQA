@@ -1,0 +1,23 @@
+
+Part II: SQL
+
+Given you have table of products with fields id, product_name, product_type, product_model,
+price in database,
+And product_type can be desktop or laptop,
+And model can be any String,
+And name can be any String,
+Select all product names for laptops from table products with average price < $2000
+
+Answer:
+----------------------------------------------------
+SELECT product_name
+FROM products
+WHERE product_type = "laptops" AND price < 2000;
+----------------------------------------------------
+
+Answer Breakdown:
+Line 1: Lets the user select the column that is labeled product_name which is column 2 for this table
+Line 2: Specifies which table the data is retrieved from
+Line 3: Lets the user specify what value from column product_type the user wants. While also requiring the price 
+of the product type to be less than 2000. product_type has to equal "laptops" and the price is under 2000 for 
+this to return true
